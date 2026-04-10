@@ -12,7 +12,7 @@ public class Main
 
 
         // display home screen
-        System.out.println("Welcome to Gregor's Math App");
+        System.out.println("Welcome to Abeer's Math App");
 
         System.out.print("Enter the first number: ");
         // get input from the user using scanner.nextLine() or scanner.nextDouble()
