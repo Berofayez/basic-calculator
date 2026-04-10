@@ -1,17 +1,58 @@
 package org.pluralsight;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+import java.util.Scanner;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
+public class Main
+{
+    static void main()
+    {
+        // declare variables
+        Scanner scanner = new Scanner(System.in);
+        // create other variables
+
+
+        // display home screen
+        System.out.println("Welcome to Gregor's Math App");
+
+        System.out.print("Enter the first number: ");
+        // get input from the user using scanner.nextLine() or scanner.nextDouble()
+        double firstNumber = scanner.nextDouble();
+
+        System.out.print("Enter the second number: ");
+        // get input from the user using scanner.nextLine() or scanner.nextDouble()
+        double secondNumber = scanner.nextDouble();
+        scanner.nextLine();
+
+
+
+        System.out.println();
+        System.out.println("What would you like to do?");
+        System.out.println("(A) Add");
+        System.out.println("(S) Subtract");
+        System.out.println("(M) Multiply");
+        System.out.println("(D) Divide");
+        System.out.print("Enter your selection: ");
+        // get the user select option
+
+        String selection = scanner.nextLine();
+
+        if(selection.equalsIgnoreCase("A")) {
+            double sum = firstNumber + secondNumber;
+            System.out.println(firstNumber + "+" + secondNumber + "=" + sum);
+
+        }else if(selection.equalsIgnoreCase("S")){
+            double sub = firstNumber - secondNumber;
+            System.out.println(firstNumber + "-" + secondNumber + "=" + sub);
+        }else if(selection.equalsIgnoreCase("M")) {
+            double multi = firstNumber * secondNumber;
+            System.out.println(firstNumber + "*" + secondNumber + "=" + multi);
+        } else if(selection.equalsIgnoreCase("D")) {
+            double div = firstNumber / secondNumber;
+            System.out.println(firstNumber + "/" + secondNumber + "=" + div);
+        } else {
+            System.out.println("you made a BAD choice");
         }
+
     }
 }
+
